@@ -1,0 +1,25 @@
+.skills {
+    background-color: greenyellow;
+
+}
+
+.skillsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skillsItems {
+    border: 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}

@@ -1,0 +1,50 @@
+.about {
+    min-height: calc(100vh - 100px);
+    background-color: cornflowerblue;
+
+}
+
+
+.aboutContainer{
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mainBlock {
+    width: 500px;
+    color: wheat;
+}
+
+.nameContainer {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 45px;
+}
+
+.job {
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.buttonsContainer {
+   display: flex;
+    justify-content: space-evenly;
+}
+
+.photo {
+    width: 300px;
+    height: 400px;
+    background-color: grey;
+    margin-right: 30px;
+}

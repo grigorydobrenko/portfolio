@@ -1,0 +1,14 @@
+.nav {
+    border: 1px solid red;
+    width: 400px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.nav a {
+   text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
