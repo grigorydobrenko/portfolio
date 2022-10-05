@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.3f730bb8.css",
+    "main.js": "/portfolio/static/js/main.9c335f2b.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/avatar.jpg": "/portfolio/static/media/avatar.f6ce7d1dd9733d178613.jpg",
+    "static/media/WaySamurai.jpg": "/portfolio/static/media/WaySamurai.33e55c033428160a1048.jpg",
+    "static/media/Todolist.jpg": "/portfolio/static/media/Todolist.209dc36642b49a468887.jpg",
+    "static/media/Counter.jpg": "/portfolio/static/media/Counter.80092deef59eec292b28.jpg",
+    "static/media/icons8-react.svg": "/portfolio/static/media/icons8-react.7a4752ec295dfaf32108.svg",
+    "static/media/icons8-redux.svg": "/portfolio/static/media/icons8-redux.e3b21dabc440eaee379e.svg",
+    "static/media/icons8-javascript.svg": "/portfolio/static/media/icons8-javascript.19600440c8c62e3de974.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/icons8-typescript.svg": "/portfolio/static/media/icons8-typescript.ced98752566ac4b3a366.svg",
+    "static/media/icons8-Css.svg": "/portfolio/static/media/icons8-Css.64fa1d1c4801d931c371.svg",
+    "static/media/icons8-html.svg": "/portfolio/static/media/icons8-html.8ae3d4adcd70a1028a63.svg",
+    "main.3f730bb8.css.map": "/portfolio/static/css/main.3f730bb8.css.map",
+    "main.9c335f2b.js.map": "/portfolio/static/js/main.9c335f2b.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f730bb8.css",
+    "static/js/main.9c335f2b.js"
+  ]
+}
