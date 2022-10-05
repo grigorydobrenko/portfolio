@@ -5,7 +5,7 @@
 }
 
 
-.aboutContainer{
+.aboutContainer {
     min-height: calc(100vh - 100px);
     display: flex;
     justify-content: space-between;
@@ -38,13 +38,16 @@
 }
 
 .buttonsContainer {
-   display: flex;
+    display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .photo {
     width: 300px;
     height: 400px;
-    background-color: grey;
     margin-right: 30px;
+    background-image: url('../../common/images/avatar.jpg');
+    background-size: cover;
+    background-position: center;
 }

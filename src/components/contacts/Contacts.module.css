@@ -1,0 +1,26 @@
+.contacts {
+    background-color: darkslateblue;
+}
+
+.contactsContainer {
+
+}
+
+.contactsTitle {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contactsForm {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.contactsForm * {
+    width: 100%;
+    margin-bottom: 10px;
+}

@@ -1,13 +1,8 @@
-.skills {
-    background-color: greenyellow;
-
+.projects {
+    background-color: cornflowerblue;
 }
 
-.skillsContainer {
-    flex-direction: column;
-    justify-content: flex-start;
 
-}
 
 .title {
     font-size: 35px;
@@ -15,12 +10,11 @@
     text-align: center;
 }
 
-.skillsItems {
+.projectsItems {
     border: 1px solid;
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-
 }

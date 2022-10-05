@@ -1,0 +1,23 @@
+.footer {
+    background-color: #282828;
+    color: wheat;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 22px;
+}
+.IconsContainer {
+    width: 320px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    box-sizing: border-box;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
