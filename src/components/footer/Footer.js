@@ -6,14 +6,8 @@ import container from "../../common/styles/Container.module.css";
 const Footer = () => {
     return (
         <div className={styles.footer}>
-            <div className={`${container.container} ${container.itemsContainer}`}>
+            <div className={`${container.container} ${styles.footerContainer}`}>
                 <span className={styles.title}>Grigory Dobrenko</span>
-                <div className={styles.IconsContainer}>
-                    <div className={styles.icon}></div>
-                    <div className={styles.icon}></div>
-                    <div className={styles.icon}></div>
-                    <div className={styles.icon}></div>
-                </div>
                 <span>2022</span>
             </div>
         </div>

@@ -1,15 +1,9 @@
 .contacts {
-    background-color: darkslateblue;
+    background-color: #6e7fd1;
 }
 
 .contactsContainer {
-
-}
-
-.contactsTitle {
-    font-size: 35px;
-    margin-bottom: 20px;
-    text-align: center;
+        color: #ffffff;
 }
 
 .contactsForm {
@@ -20,7 +14,49 @@
     margin-bottom: 20px;
 }
 
-.contactsForm * {
+.contactsForm {
+    margin-left: 100px;
+}
+
+.Form{
+    width: 100%;
+}
+
+.Form * {
+
     width: 100%;
     margin-bottom: 10px;
+}
+
+.Form input, textarea {
+    padding: 4px 15px 4px 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    appearance: none;
+    border-bottom: 2px solid rgba(0,0,0,.12);
+}
+
+.contactsContainer {
+    display: flex;
+}
+
+.contactsInfo {
+    width: 40%;
+}
+
+.contactsForm {
+    width: 60%;
+}
+
+.icon {
+    height: 32px;
+    width: 32px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.github {
+    background-image: url("../../common/icons/github-svgrepo-com.svg");
 }
