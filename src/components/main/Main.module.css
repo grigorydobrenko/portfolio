@@ -1,11 +1,12 @@
-.about {
+
+
+.main {
     min-height: 100vh;
     background-color: cornflowerblue;
     background-image: url("./../../common/images/1.jpg");
 }
 
-
-.aboutContainer {
+.mainContainer {
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -15,26 +16,31 @@
 
 .mainBlock {
     width: 500px;
-    color: wheat;
 }
 
-.nameContainer {
+.hello {
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    color: #fff;
 }
 
 .name {
-    font-size: 45px;
+    font-size: 65px;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.1;
 }
 
 .job {
-    font-size: 25px;
+    font-size: 22px;
     margin-bottom: 25px;
+    color: #fff;
 }
 
 .description {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 30px;
+    color: #fff;
 }
 
 .buttonsContainer {

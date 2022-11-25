@@ -2,3 +2,14 @@
     box-sizing: border-box;
 }
 
+ body {
+     font-family: 'Open Sans', sans-serif;
+     font-size: 18px;
+     line-height: 1.6;
+     letter-spacing: 0;
+     word-wrap: break-word;
+     font-weight: 400;
+     background-color: #fff;
+     color: #54545f;
+ }
+

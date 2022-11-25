@@ -1,16 +1,18 @@
 import './App.css';
 import Header from "./components/header/Header";
-import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Contacts from "./components/contacts/Contacts";
 import Footer from "./components/footer/Footer";
+import {Main} from "./components/main/Main";
+import {AboutMe} from "./components/aboutMe/AboutMe";
 
 function App() {
     return (
         <div className="App">
             <Header/>
-            <About/>
+            <Main/>
+            <AboutMe/>
             <Skills/>
             <Projects/>
             <Contacts/>
@@ -20,3 +22,6 @@ function App() {
 }
 
 export default App;
+
+
+

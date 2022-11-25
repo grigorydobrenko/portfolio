@@ -10,7 +10,7 @@ const Skill = (props) => {
         <div className={styles.skill}>
             {/*<div className={styles.icon}><img src={`../../../common/icons/icons8-${props.title}.svg`} alt={props.title}/></div>*/}
             <div className={`${styles.icon} ${skillIcon}`}></div>
-            <h3>{props.title}</h3>
+            <h3 className={styles.skillTitle}>{props.title}</h3>
             <span className={styles.description}>{props.description}</span>
         </div>
     );

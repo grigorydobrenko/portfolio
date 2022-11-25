@@ -1,12 +1,13 @@
 .skills {
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
+    background-color: #f8f9fa;
 
 }
 
 .skillsContainer {
     flex-direction: column;
     justify-content: flex-start;
-
+    margin: 80px auto;
 }
 
 .title {
