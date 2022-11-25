@@ -1,12 +1,12 @@
 .about {
-    min-height: calc(100vh - 100px);
+    min-height: 100vh;
     background-color: cornflowerblue;
-
+    background-image: url("./../../common/images/1.jpg");
 }
 
 
 .aboutContainer {
-    min-height: calc(100vh - 100px);
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;

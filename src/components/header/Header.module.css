@@ -1,10 +1,24 @@
 .header {
-    height: 100px;
-    background-color: pink;
+    height: 60px;
+    /*background-color: pink;*/
 
 }
 
-.headerContainer{
+.non-animate {
+    background-color: rgba(251, 231, 239, 0);
+}
+
+.animate {
+    background-color: rgba(251, 231, 239, 1);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.headerContainer {
     height: 100%;
     display: flex;
     justify-content: flex-end;
