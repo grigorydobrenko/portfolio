@@ -1,5 +1,6 @@
 .projectItem {
-    width: 450px;
+    width: 400px;
+    height: 420px;
 
     background-color: #142eb5;
     display: flex;

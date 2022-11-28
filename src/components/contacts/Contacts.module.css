@@ -60,3 +60,22 @@
 .github {
     background-image: url("../../common/icons/github-svgrepo-com.svg");
 }
+
+.linkedin {
+    background-image: url("../../common/icons/linkedin-svgrepo-com.svg");
+}
+
+.codewars {
+    background-image: url("../../common/icons/codewars-svgrepo-com.svg");
+}
+
+
+.linksContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.description {
+    margin-bottom: 20px;
+}

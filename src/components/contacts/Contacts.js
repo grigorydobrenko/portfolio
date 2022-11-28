@@ -12,16 +12,22 @@ const Contacts = () => {
                 <Title span={'Contact Me'} h3={'Contact Me'}/>
                 <div className={styles.contactsContainer}>
                     <div className={styles.contactsInfo}>
-                        <p>Please share as much info, as possible so we can get the most out of our first catch-up.</p>
+                        <p className={styles.description}>Please share as much info, as possible so we can get the most out of our first catch-up.</p>
                         <h3>Call:</h3>
                         <p>+375 (44) 785-53-63</p>
-                        <div>
-                            <a href="">
-                            <div className={`${styles.icon} ${styles.github}`}></div>
-                        </a>
-                            <a href=""></a>
-                            <a href=""></a>
-                            <a href=""></a>
+                        <div className={styles.linksContainer}>
+                            <a href="https://github.com/grigorydobrenko" target='_blank'>
+                            <div className={`${styles.icon} ${styles.github}`}>
+                            </div>
+                             </a>
+                            <a href="https://ru.linkedin.com/" target='_blank'>
+                                <div className={`${styles.icon} ${styles.linkedin}`}>
+                                </div>
+                            </a>
+                            <a href="https://www.codewars.com/users/Grigory_Dobrenko" target='_blank'>
+                                <div className={`${styles.icon} ${styles.codewars}`}>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div className={styles.contactsForm}>
