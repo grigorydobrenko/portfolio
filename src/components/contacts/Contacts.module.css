@@ -1,9 +1,10 @@
 .contacts {
     background-color: #6e7fd1;
+
 }
 
 .contactsContainer {
-        color: #ffffff;
+    color: #ffffff;
 }
 
 .contactsForm {
@@ -18,12 +19,11 @@
     margin-left: 100px;
 }
 
-.Form{
+.Form {
     width: 100%;
 }
 
 .Form * {
-
     width: 100%;
     margin-bottom: 10px;
 }
@@ -34,11 +34,13 @@
     outline: none;
     border: none;
     appearance: none;
-    border-bottom: 2px solid rgba(0,0,0,.12);
+    border-bottom: 2px solid rgba(0, 0, 0, .12);
 }
 
 .contactsContainer {
     display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .contactsInfo {
@@ -78,4 +80,32 @@
 
 .description {
     margin-bottom: 20px;
+}
+
+
+@media (max-width: 950px) {
+    .contactsContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contactsInfo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactsForm {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .linksContainer {
+        justify-content: center;
+    }
+    .contactsForm {
+        margin-left: 0;
+    }
+
+
+
 }

@@ -4,20 +4,31 @@ import container from '../../common/styles/Container.module.css'
 
 import Project from "./project/Project";
 import {Title} from "../../common/title/Title";
+import todolistImg from "../../common/images/todo.jpg"
+import socialNetworkImg from "../../common/images/sn.jpg"
+
 
 const Projects = () => {
+    const todolist = {
+        backgroundImage: `url(${todolistImg})`,
+    };
+    const socialNetwork = {
+        backgroundImage: `url(${socialNetworkImg})`,
+    };
+
+
+
     return (
         <div className={styles.projects}>
             <div className={container.container}>
                 <div className={`${container.itemsContainer} ${styles.projectsContainer}`}>
                     <Title span={'Portfolio'} h3={'Some of my most recent projects'}/>
                     <div className={styles.projectsItems}>
-                        <Project title={'Todolist'}
-                                 description={'Todolist '}/>
-                        <Project title={'WaySamurai'}
-                                 description={'WaySamurai'}/>
-                        <Project title={'Counter'}
-                                 description={'Counter'}/>
+                        <Project title={'Todolist'} style={todolist}
+                                 description={'It\'s a list of tasks you need to complete or things that you want to do'}/>
+                        <Project title={'Social network'} style={socialNetwork}
+                                 description={'An application which enables users to communicate with each other by posting information, comments, messages, images, etc.'}/>
+
                     </div>
                 </div>
             </div>

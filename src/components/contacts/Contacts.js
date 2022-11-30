@@ -8,7 +8,7 @@ import {Title} from "../../common/title/Title";
 const Contacts = () => {
     return (
         <div className={styles.contacts}>
-            <div className={`${container.container} ${container.itemsContainer}`}>
+            <div className={container.container}>
                 <Title span={'Contact Me'} h3={'Contact Me'}/>
                 <div className={styles.contactsContainer}>
                     <div className={styles.contactsInfo}>
