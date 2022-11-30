@@ -1,7 +1,14 @@
 .header {
     height: 90px;
+    /*position: sticky;*/
     /*background-color: pink;*/
-
+    z-index: 1;
+    .headerContainer {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
 
 .non-animate {
@@ -18,9 +25,3 @@
     width: 100%
 }
 
-.headerContainer {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}

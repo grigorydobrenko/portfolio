@@ -1,0 +1,80 @@
+
+.main {
+  min-height: 100vh;
+  background-color: cornflowerblue;
+  background-image: url("./../../common/images/1.jpg");
+
+  .mainContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 1040px) {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .mainBlock {
+      width: 500px;
+
+      .hello {
+        font-size: 30px;
+        margin-bottom: 0;
+        color: #fff;
+      }
+
+      .name {
+        font-size: 65px;
+        margin-bottom: 20px;
+        color: #fff;
+        line-height: 1.1;
+      }
+
+      .job {
+        font-size: 22px;
+        margin-bottom: 25px;
+        color: #fff;
+      }
+
+      .description {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: #fff;
+      }
+
+      .buttonsContainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+    }
+
+    .photo {
+      width: 300px;
+      height: 400px;
+      margin-right: 30px;
+      background-image: url('../../common/images/avatar.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+
+//@media (max-width: 1040px) {
+//    .mainContainer {
+//        display: flex;
+//        justify-content: center;
+//        text-align: center;
+//        margin-top: 150px;
+//    }
+//
+//}
+
+
+
+
+

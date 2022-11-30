@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 import container from '../../common/styles/Container.module.css'
 
 import Nav from "../nav/Nav";
