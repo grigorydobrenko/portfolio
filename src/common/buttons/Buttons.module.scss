@@ -1,0 +1,24 @@
+@import '../styles/Variables';
+
+.btn {
+  font-family: 'Barlow', sans-serif;
+  color: $secondaryTextColor;
+  display: inline-block;
+  padding: 11px 35px 14px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all .3s ease;
+  text-decoration: none;
+  @media (max-width: 1040px) {
+    padding: 8px 30px 11px;
+  }
+}
+
+.btnPrimary {
+  background-color: $btnBackgroundColor;
+  border-radius: 50px;
+}
+
+.btnSecondary {
+  text-decoration: underline;
+}

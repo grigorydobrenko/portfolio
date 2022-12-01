@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Projects.module.scss'
-import container from '../../common/styles/Container.module.css'
-
+import container from '../../common/styles/Container.module.scss'
 import Project from "./project/Project";
 import {Title} from "../../common/title/Title";
 import todolistImg from "../../common/images/todo.jpg"
@@ -19,7 +18,7 @@ const Projects = () => {
 
 
     return (
-        <div className={styles.projects}>
+        <div className={styles.projects} id={'projects'}>
             <div className={container.container}>
                 <div className={`${container.itemsContainer} ${styles.projectsContainer}`}>
                     <Title span={'Portfolio'} h3={'Some of my most recent projects'}/>

@@ -1,6 +1,8 @@
+@import '../../common/styles/Variables';
+
 .footer {
-    background-color: #282828;
-    color: wheat;
+    background-color: $bgFooterColor;
+    color: $footerColor;
     .footerContainer {
         margin: 40px auto;
         display: flex;

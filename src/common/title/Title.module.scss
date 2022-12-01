@@ -1,9 +1,11 @@
+@import '../styles/Variables';
+
 .title {
     text-align: center;
     margin-bottom: 28px;
     .span {
         font-size: 20px;
-        color: #fb503b;
+        color: $secondaryTitleColor;
         font-weight: 600;
         font-family: "Barlow", sans-serif;
     }

@@ -1,11 +1,15 @@
+@import '../../common/styles/Variables';
+
 .contacts {
-  background-color: #6e7fd1;
+  background-color: $bgColor;
+  padding: 80px 0 0 0;
 
   .contactsContainer {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    color: #ffffff;
+    color: $secondaryTextColor;
+    margin: 80px auto;
     @media (max-width: 950px) {
       flex-direction: column;
       justify-content: center;
@@ -80,7 +84,15 @@
           border: none;
           appearance: none;
           border-bottom: 2px solid rgba(0, 0, 0, .12);
+          font-size: 20px;
         }
+
+      }
+
+      .contactButtons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
       }
     }
   }
@@ -88,56 +100,3 @@
 }
 
 
-//.contactsForm {
-//
-//}
-
-
-//
-//.Form * {
-//  width: 100%;
-//  margin-bottom: 10px;
-//}
-
-//.Form input, textarea {
-//  padding: 4px 15px 4px 0;
-//  background: transparent;
-//  outline: none;
-//  border: none;
-//  appearance: none;
-//  border-bottom: 2px solid rgba(0, 0, 0, .12);
-//}
-
-//.contactsContainer {
-//  display: flex;
-//  justify-content: space-around;
-//  width: 100%;
-//  color: #ffffff;
-//}
-
-
-//@media (max-width: 950px) {
-//  .contactsContainer {
-//    flex-direction: column;
-//    justify-content: center;
-//  }
-//
-//  .contactsInfo {
-//    width: 100%;
-//    text-align: center;
-//  }
-//
-//  .contactsForm {
-//    width: 100%;
-//    margin-top: 50px;
-//  }
-//
-//  .linksContainer {
-//    justify-content: center;
-//  }
-//  .contactsForm {
-//    margin-left: 0;
-//  }
-//
-//
-//}

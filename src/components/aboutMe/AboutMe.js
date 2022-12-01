@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './AboutMe.module.scss'
-import container from '../../common/styles/Container.module.css'
+import container from '../../common/styles/Container.module.scss'
 import {Title} from "../../common/title/Title";
 
 export const AboutMe = () => {
     return (
-        <div className={container.about}>
+        <div className={container.about} id={'about'}>
             <div className={container.container}>
                 <div className={styles.aboutContainer}>
                     <Title span={'About Me'} h3={'Know Me More'}/>

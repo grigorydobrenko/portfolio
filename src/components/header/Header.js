@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Header.module.scss'
-import container from '../../common/styles/Container.module.css'
+import container from '../../common/styles/Container.module.scss'
 
 import Nav from "../nav/Nav";
 

@@ -1,7 +1,5 @@
 .header {
     height: 90px;
-    /*position: sticky;*/
-    /*background-color: pink;*/
     z-index: 1;
     .headerContainer {
         height: 100%;
@@ -17,6 +15,7 @@
 
 .animate {
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 4px rgb(0 0 0 / 20%);
 }
 
 .sticky {

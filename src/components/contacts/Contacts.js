@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './Contacts.module.scss'
-import container from '../../common/styles/Container.module.css'
-import buttons from '../../common/buttons/Buttons.module.css'
+import container from '../../common/styles/Container.module.scss'
+import buttons from '../../common/buttons/Buttons.module.scss'
 import {Title} from "../../common/title/Title";
 
 
 const Contacts = () => {
     return (
-        <div className={styles.contacts}>
+        <div className={styles.contacts} id={'contact Me'}>
             <div className={container.container}>
-                <Title span={'Contact Me'} h3={'Contact Me'}/>
+                <Title h3={'Contact Me'}/>
                 <div className={styles.contactsContainer}>
                     <div className={styles.contactsInfo}>
                         <p className={styles.description}>Please share as much info, as possible so we can get the most out of our first catch-up.</p>
@@ -45,7 +45,7 @@ const Contacts = () => {
                                 <textarea name="" id=""></textarea>
                             </div>
                         </form>
-                        <a href="" className={buttons.btn}>Send</a>
+                        <div className={styles.contactButtons}><a href="" className={`${buttons.btn} ${buttons.btnPrimary}`}>Send</a></div>
                     </div>
                 </div>
 

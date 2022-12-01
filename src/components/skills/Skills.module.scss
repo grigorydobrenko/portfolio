@@ -1,5 +1,7 @@
+@import '../../common/styles/Variables';
+
 .skills {
-  background-color: #f8f9fa;
+  background-color: $bgThirtyColor;
 
   .skillsContainer {
     flex-direction: column;
