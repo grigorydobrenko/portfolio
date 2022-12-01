@@ -12,7 +12,6 @@
   background-repeat: no-repeat;
   position: relative;
   transition: background-size 1s ease;
-  color: white;
   text-decoration: none;
 
   &:hover::before {
@@ -24,6 +23,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    filter: blur(1px);
   }
 
   &:hover {
