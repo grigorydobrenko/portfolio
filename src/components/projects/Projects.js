@@ -6,7 +6,6 @@ import {Title} from "../../common/title/Title";
 import todolistImg from "../../common/images/todo.jpg"
 import socialNetworkImg from "../../common/images/sn.jpg"
 
-
 const Projects = () => {
     const todolist = {
         backgroundImage: `url(${todolistImg})`,
@@ -14,7 +13,6 @@ const Projects = () => {
     const socialNetwork = {
         backgroundImage: `url(${socialNetworkImg})`,
     };
-
 
 
     return (
@@ -32,7 +30,8 @@ const Projects = () => {
                 </div>
             </div>
         </div>
-    );
+    )
+        ;
 };
 
 export default Projects;
