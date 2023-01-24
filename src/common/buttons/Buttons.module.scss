@@ -17,8 +17,13 @@
 .btnPrimary {
   background-color: $btnBackgroundColor;
   border-radius: 50px;
+  &:hover {
+    background-color: $secondaryTitleColor;
+  }
 }
 
 .btnSecondary {
   text-decoration: underline;
+  padding: 0;
+  margin: 11px 35px 14px;
 }

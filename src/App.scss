@@ -2,6 +2,29 @@
 
 .App {
   box-sizing: border-box;
+  .cursor {
+    background-color: transparent;
+    border: 1.5px solid rgba(251, 80, 59, 0.6);
+    box-shadow: 0 0 1px rgba(251, 80, 59, 0.5);
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px; height: 5px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(251, 80, 59, 1);
+      border-radius: 100%;
+    }
+  }
 }
 
 body {

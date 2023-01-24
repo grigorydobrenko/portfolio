@@ -15,22 +15,6 @@
     transition: all .8s ease;
     text-decoration: none;
     cursor: pointer;
-    &::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 10px;
-      background-color: #282828;
-      bottom: 0;
-
-    }
-    &:hover {
-      &::after {
-       width: 20px;
-      }
-
-
-    }
   }
 
   .nonAnimated {

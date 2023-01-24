@@ -7,6 +7,8 @@ import todolistImg from "../../common/images/todo.jpg"
 import socialNetworkImg from "../../common/images/sn.jpg"
 
 const Projects = () => {
+
+
     const todolist = {
         backgroundImage: `url(${todolistImg})`,
     };

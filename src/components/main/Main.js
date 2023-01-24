@@ -3,8 +3,15 @@ import styles from './Main.module.scss'
 import container from '../../common/styles/Container.module.scss'
 import buttons from '../../common/buttons/Buttons.module.scss'
 import Fade from 'react-reveal/Fade';
+import {CursorVariantContext} from "../../App";
 
 export const Main = () => {
+
+    const {
+        linkEnter,
+        linkLeave
+    } = React.useContext(CursorVariantContext);
+
     return (
         <div className={styles.main}>
             <div className={container.container}>
@@ -20,10 +27,14 @@ export const Main = () => {
                                 </p>
                             </div>
 
-                            <div className={styles.buttonsContainer}><a
-                                className={`${buttons.btn} ${buttons.btnPrimary}`} href="#projects">View My Works</a>
-                                <a className={`${buttons.btn} ${buttons.btnSecondary}`} href="#contact Me">Contact
-                                    Me</a></div>
+                            <div className={styles.buttonsContainer}>
+                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave}
+                                    className={`${buttons.btn} ${buttons.btnPrimary}`} href="#projects">View My
+                                    Works</a>
+                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave}
+                                    className={`${buttons.btn} ${buttons.btnSecondary}`} href="#contact Me">Contact
+                                    Me</a>
+                            </div>
                         </div>
                     </Fade>
                     <Fade right>
