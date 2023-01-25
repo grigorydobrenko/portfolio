@@ -4,6 +4,7 @@ import container from '../../common/styles/Container.module.scss'
 import buttons from '../../common/buttons/Buttons.module.scss'
 import Fade from 'react-reveal/Fade';
 import {CursorVariantContext} from "../../App";
+import {Link} from "react-scroll";
 
 export const Main = () => {
 
@@ -13,7 +14,7 @@ export const Main = () => {
     } = React.useContext(CursorVariantContext);
 
     return (
-        <div className={styles.main}>
+        <div className={styles.main} id={'home'}>
             <div className={container.container}>
                 <div className={styles.mainContainer}>
                     <Fade left>
@@ -28,12 +29,32 @@ export const Main = () => {
                             </div>
 
                             <div className={styles.buttonsContainer}>
-                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave}
-                                    className={`${buttons.btn} ${buttons.btnPrimary}`} href="#projects">View My
-                                    Works</a>
-                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave}
-                                    className={`${buttons.btn} ${buttons.btnSecondary}`} href="#contact Me">Contact
-                                    Me</a>
+                                <Link
+                                    onMouseEnter={linkEnter}
+                                    onMouseLeave={linkLeave}
+                                    to={"projects"}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-90}
+                                    duration={100}
+                                    className={`${buttons.btn} ${buttons.btnPrimary}`}
+                                >
+                                    View My
+                                    Works
+                                </Link>
+                                <Link
+                                    onMouseEnter={linkEnter}
+                                    onMouseLeave={linkLeave}
+                                    to={"contactMe"}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-90}
+                                    duration={100}
+                                    className={`${buttons.btn} ${buttons.btnSecondary}`}
+                                >
+                                    Contact
+                                    Me
+                                </Link>
                             </div>
                         </div>
                     </Fade>

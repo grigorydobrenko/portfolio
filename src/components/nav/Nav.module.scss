@@ -1,7 +1,6 @@
 @import '../../common/styles/Variables';
 
 .nav {
-  border: 1px solid red;
   width: 400px;
   display: flex;
   justify-content: space-evenly;
@@ -15,6 +14,7 @@
     transition: all .8s ease;
     text-decoration: none;
     cursor: pointer;
+
   }
 
   .nonAnimated {
@@ -24,5 +24,9 @@
   .animated {
     color: black;
   }
+  .active {
+    color: $secondaryTitleColor;
+  }
+
 }
 

@@ -1,12 +1,13 @@
 @import '../../common/styles/Variables';
 
 .footer {
-    background-color: $bgFooterColor;
-    color: $footerColor;
-    .footerContainer {
-        margin: 40px auto;
-        display: flex;
-        justify-content: center;
-    }
+  background-color: $bgFooterColor;
+  color: $footerColor;
+
+  .footerContainer {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
 }
 

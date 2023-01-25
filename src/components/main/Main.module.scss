@@ -72,16 +72,19 @@
       width: 300px;
       height: 400px;
       margin-right: 30px;
-      background-image: url('../../common/images/avatar.jpg');
-      background-size: contain;
+      background-image: url('../../common/images/photo.jpg');
+      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      border-radius:  12px;
+
       @media (max-width: 1040px) {
         width: 200px;
         height: 300px;
         margin-bottom: 20px;
         margin-right: 0;
       }
+
     }
   }
 }

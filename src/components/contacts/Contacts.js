@@ -15,7 +15,7 @@ const Contacts = () => {
     } = React.useContext(CursorVariantContext)
 
     return (
-        <div className={styles.contacts} id={'contact Me'}>
+        <div className={styles.contacts} id={'contactMe'}>
             <div className={container.container}>
                 <Title h3={'Contact Me'}/>
                 <div className={styles.contactsContainer}>

@@ -1,27 +1,16 @@
 import React from 'react';
 import styles from './Nav.module.scss'
-import {CursorVariantContext} from '../../App'
+import {CustomLink} from "./Link";
 
 const Nav = (props) => {
 
-    const {
-        linkEnter,
-        linkLeave
-    } = React.useContext(CursorVariantContext)
-
-    const arrowStyle = props.color === true ? styles.animated : styles.nonAnimated
-
-
     return (
         <div className={styles.nav}>
-            <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="#about"
-               className={`${styles.link} ${arrowStyle}`}>About</a>
-            <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="#skills"
-               className={`${styles.link} ${arrowStyle}`}>Skills</a>
-            <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="#projects"
-               className={`${styles.link} ${arrowStyle}`}>Projects</a>
-            <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="#contact Me"
-               className={`${styles.link} ${arrowStyle}`}>Contact Me</a>
+            <CustomLink color={props.color} to={'home'} title={'Home'}/>
+            <CustomLink color={props.color} to={'about'} title={'About'}/>
+            <CustomLink color={props.color} to={'skills'} title={'Skills'}/>
+            <CustomLink color={props.color} to={'projects'} title={'Projects'}/>
+            <CustomLink color={props.color} to={'contactMe'} title={'Contact'}/>
         </div>
     );
 };
