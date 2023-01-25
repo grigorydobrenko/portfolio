@@ -1,0 +1,58 @@
+@import '../../../common/styles/Variables';
+
+.burgerNav {
+  width: 100vh;
+
+  background-color: white;
+  @media (min-width: 500px) {
+    display: none;
+  }
+
+  .burgerNavItems {
+    //padding-top: 90px;
+
+    display: none;
+    .link {
+      position: relative;
+      margin: 0 35px 0 0;
+      color: $mainTitleColor;
+      font-family: "Barlow", sans-serif;
+      font-weight: 600;
+      transition: all .8s ease;
+      text-decoration: none;
+      cursor: pointer;
+
+    }
+
+    .nonAnimated {
+      color: white;
+    }
+
+    .animated {
+      color: black;
+    }
+
+    .active {
+      color: $secondaryTitleColor;
+    }
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .burgerBtn {
+    z-index: 2;
+    position: absolute;
+    //top: 90px;
+    //right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: $secondaryTitleColor;
+  }
+
+}
+

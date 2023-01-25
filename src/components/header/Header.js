@@ -3,6 +3,7 @@ import styles from './Header.module.scss'
 import container from '../../common/styles/Container.module.scss'
 
 import Nav from "../nav/Nav";
+import {BurgerNav} from "../nav/burgerNav/BurgerNav";
 
 const Header = () => {
     const [color, setColor] = useState(false)
@@ -32,6 +33,7 @@ const Header = () => {
         <div className={`${styles.header} ${styles.sticky} ${headerColor}`}>
             <div className={`${container.container} ${styles.headerContainer}`}>
                     <Nav color={color}/>
+                    <BurgerNav color={color}/>
             </div>
         </div>
     );
