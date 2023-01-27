@@ -3,7 +3,7 @@ import styles from "./Nav.module.scss";
 import {CursorVariantContext} from "../../App";
 import {Link} from 'react-scroll'
 
-export const CustomLink = ({color, to, title}) => {
+export const CustomLink = ({color, to, title, onClick}) => {
 
     const {
         linkEnter,
@@ -13,7 +13,9 @@ export const CustomLink = ({color, to, title}) => {
     const arrowStyle = color === true ? styles.animated : styles.nonAnimated
 
     return (
-        <Link activeClass={styles.active}
+        <Link
+            onClick={onClick && onClick}
+            activeClass={styles.active}
               onMouseEnter={linkEnter}
               onMouseLeave={linkLeave}
               to={to}
