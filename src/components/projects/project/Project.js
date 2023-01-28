@@ -10,7 +10,7 @@ const Project = (props) => {
 
     const title = props.title
     return (
-        <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="" className={styles.projectItem} style={props.style}>
+        <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href={props.link} target='_blank' className={styles.projectItem} style={props.style}>
             <div className={styles.projectInfo}>
                 <div className={styles.projectTitle}>{title}</div>
                 <span className={styles.projectDescription}>{props.description}</span>
