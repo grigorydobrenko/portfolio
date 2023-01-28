@@ -17,6 +17,8 @@ import Jest from "../../common/icons/jest.svg";
 import Axios from "../../common/icons/axios.svg";
 import Material from "../../common/icons/material.svg";
 import Formik from "../../common/icons/formik.svg";
+import ReactHookForm from "../../common/icons/react-hook-form.svg";
+import Sass from "../../common/icons/sass.svg";
 import Fade from 'react-reveal/Fade';
 
 
@@ -60,6 +62,13 @@ const Skills = () => {
     const formik = {
         backgroundImage: `url(${Formik})`,
     }
+    const reactHookForm = {
+        backgroundImage: `url(${ReactHookForm})`,
+    }
+    const sass = {
+        backgroundImage: `url(${Sass})`,
+    }
+
 
     return (
         <div className={styles.skills} id={'skills'}>
@@ -70,36 +79,21 @@ const Skills = () => {
                     </Fade>
                     <Fade bottom>
                         <div className={styles.skillsItems}>
-                            {/*<Skill icon={html} title={'HTML'}*/}
-                            {/*       description={'Hypertext Markup Language, is a markup language that defines the structure of web pages'}*/}
-                            {/*       style={html}/>*/}
-                            {/*<Skill icon={css} title={'CSS'}*/}
-                            {/*       description={'Cascading Style Sheets is a style sheet language which is used to describe the look and formatting of a document written in markup language'}/>*/}
-                            <Skill icon={react} title={'React'}
-                                   description={'An open-source front-end JavaScript library for building user interfaces'}/>
-                            <Skill icon={redux} title={'Redux / Redux Toolkit'}
-                                   description={'An open source JavaScript library for managing application state'}/>
-                            <Skill icon={nodeJs} title={'Node JS'}
-                                   description={''}/>
-                            <Skill icon={typescript} title={'Typescript'}
-                                   description={'TypeScript is a strongly typed programming language that builds on JavaScript'}/>
-                            {/*<Skill icon={javascript} title={'Javascript'}*/}
-                            {/*       description={'Multi-paradigm programming language. Supports object-oriented, imperative and functional styles. Is one of the core technologies of the World Wide Web'}/>*/}
-                            <Skill icon={git} title={'Git'}
-                                   description={''}/>
-                            <Skill icon={storybook} title={'Storybook'}
-                                   description={''}/>
-                            <Skill icon={jest} title={'Jest'}
-                                   description={''}/>
-                            <Skill icon={axios} title={'Axios'}
-                                   description={''}/>
-                            <Skill icon={material} title={'Material UI'}
-                                   description={''}/>
-                            <Skill icon={formik} title={'Formik'}
-                                   description={''}/>
-                            {/*<Skill icon={reactHookForm} title={'React Hook Form'}*/}
-                            {/*       description={''}/>*/}
-
+                            <Skill icon={react} title={'React'}/>
+                            <Skill icon={redux} title={'Redux / Redux Toolkit'}/>
+                            <Skill icon={nodeJs} title={'Node JS'}/>
+                            <Skill icon={typescript} title={'Typescript'}/>
+                            <Skill icon={javascript} title={'Javascript'}/>
+                            <Skill icon={git} title={'Git'}/>
+                            <Skill icon={storybook} title={'Storybook'}/>
+                            <Skill icon={jest} title={'Jest'}/>
+                            <Skill icon={axios} title={'Axios'}/>
+                            <Skill icon={material} title={'Material UI'}/>
+                            <Skill icon={formik} title={'Formik'}/>
+                            <Skill icon={reactHookForm} title={'React Hook Form'}/>
+                            <Skill icon={html} title={'HTML'}/>
+                            <Skill icon={css} title={'CSS'}/>
+                            <Skill icon={sass} title={'Sass / Scss'}/>
                         </div>
                     </Fade>
                 </div>
