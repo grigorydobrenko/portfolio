@@ -5,6 +5,8 @@ import buttons from '../../common/buttons/Buttons.module.scss'
 import {Title} from "../../common/title/Title";
 import Fade from 'react-reveal/Fade';
 import {CursorVariantContext} from "../../App";
+import axios from "axios";
+import {useFormik} from "formik";
 
 
 const Contacts = () => {
@@ -13,6 +15,49 @@ const Contacts = () => {
         linkEnter,
         linkLeave
     } = React.useContext(CursorVariantContext)
+
+    const [loading, setLoading] = React.useState(false)
+    const [myMessages, setMyMessages] = React.useState('')
+    const [error, setError] = React.useState('')
+
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            formMessage: ''
+        },
+        validate: (values) => {
+            const errors = {}
+            if (!values.name) {
+                errors.name = 'Enter your name'
+            }
+            if (!values.email) {
+                errors.email = 'Enter your email'
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'Invalid email address'
+            }
+            if (!values.formMessage) {
+                errors.formMessage = 'Enter your message'
+            }
+            return errors
+        },
+        onSubmit: values => {
+            setLoading(true)
+            console.log(values)
+            axios.post('http://localhost:3000/send-message', values)
+                .then(res => {
+                    setMyMessages('Thanks for your interest! I will contact you as soon as I have free time!')
+                    setError(false)
+                    formik.resetForm();
+                })
+                .catch(error => {
+                    setError('Error, please try again later.')
+                })
+                .finally(() => {
+                    setLoading(false)
+                })
+        },
+    })
 
     return (
         <div className={styles.contacts} id={'contactMe'}>
@@ -27,11 +72,16 @@ const Contacts = () => {
                             <p>+375 (44) 785-53-63</p>
                             <div className={styles.linksContainer}>
                                 <a onMouseEnter={linkEnter} onMouseLeave={linkLeave}
+                                   href="https://t.me/grigodo" target='_blank'>
+                                    <div className={`${styles.icon} ${styles.telegram}`}>
+                                    </div>
+                                </a>
+                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave}
                                    href="https://github.com/grigorydobrenko" target='_blank'>
                                     <div className={`${styles.icon} ${styles.github}`}>
                                     </div>
                                 </a>
-                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="https://ru.linkedin.com/"
+                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="https://www.linkedin.com/in/grigory-dobrenko-65006325a/"
                                    target='_blank'>
                                     <div className={`${styles.icon} ${styles.linkedin}`}>
                                     </div>
@@ -46,32 +96,75 @@ const Contacts = () => {
                     </Fade>
                     <Fade right>
                         <div className={styles.contactsForm}>
-                            <form className={styles.Form} action="">
-                                <div>
-                                    <label>What is Your Name:</label>
-                                    <input type="text"/>
+                            <form className={styles.form} onSubmit={formik.handleSubmit}>
+                                <div className={styles.formField}>
+                                    <label className={styles.label}>What is Your Name:</label>
+                                    <input
+                                        disabled={loading}
+                                        name="name"
+                                        {...formik.getFieldProps('name')}
+                                    />
+                                    <div className={styles.error}>
+                                        {formik.touched.name && formik.errors.name && formik.errors.name}
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Your Email Address:</label>
-                                    <input type="text"/>
+                                <div className={styles.formField}>
+                                    <label className={styles.label}>Your Email Address:</label>
+                                    <input
+                                        disabled={loading}
+                                        name="email"
+                                        {...formik.getFieldProps('email')}
+                                    />
+                                    <div className={styles.error}>
+                                        {formik.touched.email && formik.errors.email && formik.errors.email}
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>How can I Help you?:</label>
-                                    <textarea name="" id=""></textarea>
+                                <div className={styles.formField}>
+                                    <label className={styles.label}>How can I Help you?:</label>
+                                    <textarea
+                                        disabled={loading}
+                                        name="formMessage"
+                                        {...formik.getFieldProps('formMessage')}
+                                    ></textarea>
+                                    <div className={styles.error}>
+                                        {formik.touched.formMessage && formik.errors.formMessage && formik.errors.formMessage}
+                                    </div>
+                                </div>
+
+                                <div
+                                    className={styles.contactButtons}
+                                >
+                                    
+                                    <button
+                                        onMouseEnter={linkEnter}
+                                        onMouseLeave={linkLeave}
+                                        disabled={loading}
+                                        type="submit"
+                                        className={`
+                                        ${buttons.btn} ${buttons.btnPrimary} 
+                                        ${styles.contactButton}`}
+                                    >
+                                        {
+                                            loading ?
+                                            <div className={styles.loader}></div> :
+                                            <span className={styles.send}>Send</span>
+                                        }
+
+                                    </button>
+                                    <span>
+                                        {error && error}
+                                        {myMessages && myMessages}
+
+                                    </span>
                                 </div>
                             </form>
-                            <div className={styles.contactButtons}>
-                                <a href="" onMouseEnter={linkEnter} onMouseLeave={linkLeave}
-                                   className={`${buttons.btn} ${buttons.btnPrimary}`}>Send
-                                </a>
-                            </div>
                         </div>
                     </Fade>
                 </div>
 
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default Contacts;
