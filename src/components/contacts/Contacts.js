@@ -24,7 +24,7 @@ const Contacts = () => {
         initialValues: {
             name: '',
             email: '',
-            formMessage: ''
+            message: ''
         },
         validate: (values) => {
             const errors = {}
@@ -36,18 +36,18 @@ const Contacts = () => {
             } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
                 errors.email = 'Invalid email address'
             }
-            if (!values.formMessage) {
-                errors.formMessage = 'Enter your message'
+            if (!values.message) {
+                errors.message = 'Enter your message'
             }
             return errors
         },
         onSubmit: values => {
             setLoading(true)
             console.log(values)
-            axios.post('http://localhost:3000/send-message', values)
+            axios.post('https://gmail-nodejs-three.vercel.app/send-message', values)
                 .then(res => {
                     setMyMessages('Thanks for your interest! I will contact you as soon as I have free time!')
-                    setError(false)
+                    setError('')
                     formik.resetForm();
                 })
                 .catch(error => {
@@ -81,7 +81,8 @@ const Contacts = () => {
                                     <div className={`${styles.icon} ${styles.github}`}>
                                     </div>
                                 </a>
-                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave} href="https://www.linkedin.com/in/grigory-dobrenko-65006325a/"
+                                <a onMouseEnter={linkEnter} onMouseLeave={linkLeave}
+                                   href="https://www.linkedin.com/in/grigory-dobrenko-65006325a/"
                                    target='_blank'>
                                     <div className={`${styles.icon} ${styles.linkedin}`}>
                                     </div>
@@ -122,19 +123,21 @@ const Contacts = () => {
                                 <div className={styles.formField}>
                                     <label className={styles.label}>How can I Help you?:</label>
                                     <textarea
+                                        className={styles.textArea}
                                         disabled={loading}
-                                        name="formMessage"
-                                        {...formik.getFieldProps('formMessage')}
+                                        rows={3}
+                                        name="message"
+                                        {...formik.getFieldProps('message')}
                                     ></textarea>
                                     <div className={styles.error}>
-                                        {formik.touched.formMessage && formik.errors.formMessage && formik.errors.formMessage}
+                                        {formik.touched.message && formik.errors.message && formik.errors.message}
                                     </div>
                                 </div>
 
                                 <div
                                     className={styles.contactButtons}
                                 >
-                                    
+
                                     <button
                                         onMouseEnter={linkEnter}
                                         onMouseLeave={linkLeave}
@@ -146,15 +149,14 @@ const Contacts = () => {
                                     >
                                         {
                                             loading ?
-                                            <div className={styles.loader}></div> :
-                                            <span className={styles.send}>Send</span>
+                                                <div className={styles.loader}></div> :
+                                                <span className={styles.send}>Send</span>
                                         }
 
                                     </button>
                                     <span>
-                                        {error && error}
-                                        {myMessages && myMessages}
-
+                                        {error && <div className={styles.responseError}>{error}</div>}
+                                        {myMessages && <div className={styles.responseSuccess}>{myMessages}</div>}
                                     </span>
                                 </div>
                             </form>

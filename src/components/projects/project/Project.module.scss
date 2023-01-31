@@ -15,6 +15,12 @@
   text-decoration: none;
   &:last-child {
     background-size: 400px 450px;
+    @media (max-width: 560px) {
+      max-height: 300px;
+    }
+  }
+  @media (max-width: 560px) {
+    max-height: 300px;
   }
   &:hover::before {
     position: absolute;

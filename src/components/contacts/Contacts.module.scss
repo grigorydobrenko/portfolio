@@ -2,8 +2,10 @@
 
 .contacts {
   background-color: $bgColor;
-  padding: 140px 0;
-
+  padding: 120px 0;
+  @media (max-width: 950px) {
+    padding: 80px 0;
+  }
   .contactsContainer {
     display: flex;
     justify-content: space-around;
@@ -104,6 +106,9 @@
             margin-bottom: 15px;
           }
 
+          .textArea {
+            resize: none;
+          }
           .error {
             margin-top: 2px;
             color: #8b0000;
@@ -119,24 +124,34 @@
         align-items: center;
         gap: 20px;
         justify-content: space-between;
-        margin-top: 50px;
+        margin-top: 70px;
+
+        .responseError {
+          color: #8b0000;
+          font-size: 26px;
+        }
+
+        .responseSuccess {
+          color: greenyellow;
+          font-size: 18px;
+          font-weight: 700;
+        }
 
         .contactButton {
           width: 180px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          max-height: 54px;
-          max-width: 182px;
+
 
           .loader {
-            margin-left: 40px;
-            margin-top: 10px;
+            margin-left: 25px;
+            //margin-top: 10px;
             border: 5px solid #f3f3f3;
             border-radius: 50%;
             border-top: 5px solid #6e7fd1;
-            width: 30px;
-            height: 30px;
+            width: 22px;
+            height: 22px;
             -webkit-animation: spin 2s linear infinite; /* Safari */
             animation: spin 2s linear infinite;
           }
