@@ -43,7 +43,6 @@ const Contacts = () => {
         },
         onSubmit: values => {
             setLoading(true)
-            console.log(values)
             axios.post('https://gmail-nodejs-three.vercel.app/send-message', values)
                 .then(res => {
                     setMyMessages('Thanks for your interest! I will contact you as soon as I have free time!')
